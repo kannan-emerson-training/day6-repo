@@ -13,7 +13,8 @@ namespace CustomerInheritanceApp.Domain
         private string _location;
 
 
-        public Customer(string id, string name):this(id,name,"Nodia")
+        public Customer(string myid, string myname)
+            :this(myid,myname,"Noida")
         {
            
            
@@ -27,6 +28,8 @@ namespace CustomerInheritanceApp.Domain
             _id = id;
             _name = name;
            this. _location = _location;
+
+            Console.WriteLine("customer created");
         }
       
 
@@ -49,6 +52,13 @@ namespace CustomerInheritanceApp.Domain
         public override string ToString()
         {
             return $"id is {_id} , name is {_name} ,location {_location},parent {base.ToString()}";
+        }
+
+        public override bool Equals(object second)
+        {
+           Customer c=   second as Customer;//casting 
+           return (this._id == c._id);
+            //return (this.Id == c.Id && this.Name == c.Name);
         }
 
     }
