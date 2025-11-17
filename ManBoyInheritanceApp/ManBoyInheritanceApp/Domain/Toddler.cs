@@ -10,6 +10,7 @@ namespace ManBoyInheritanceApp.Domain
     {
         public override void Play()
         {
+          //  base.Play();
             Console.WriteLine("Toddler playing in floor");
         }
     }

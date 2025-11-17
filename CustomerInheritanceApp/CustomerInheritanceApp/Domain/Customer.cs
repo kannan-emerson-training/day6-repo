@@ -56,6 +56,7 @@ namespace CustomerInheritanceApp.Domain
 
         public override bool Equals(object second)
         {
+           
            Customer c=   second as Customer;//casting 
            return (this._id == c._id);
             //return (this.Id == c.Id && this.Name == c.Name);

@@ -13,19 +13,49 @@ namespace ManBoyInheritanceApp
 
             //CaseStudy3();
 
-            CaseStudy4();
+            ///CaseStudy4();
+
+            CaseStudy5();
+        
+        }
+
+        private static void CaseStudy5()
+        {
+            object x;// ISA type of Object
+            x = 100;
+
+            Console.WriteLine(x.GetType());
+            x = "hello";
+
+            Console.WriteLine(x.GetType());
+
+            x = new Man();
+            Console.WriteLine(x.GetType());
+
+
+            //Man temp = x as Man;
+            //temp.Play();
+
+            x = new Toddler();
+            Console.WriteLine(x.GetType());
+          
+
         }
 
         private static void CaseStudy4()
         {
-            AtThePark(new Man());
-            AtThePark(new Infant());
+            Man man= new Man();
+            AtThePark(man);
+
+            Infant infant= new Infant();
+            AtThePark(infant);
+
             AtThePark(new Toddler());
             AtThePark(new Boy());
 
         }
 
-        private static void AtThePark(Man x)//Polymorphic method (ISA)
+         static void AtThePark(Man x)//Polymorphic method (ISA)
         
         {
             Console.WriteLine("At the park..");
